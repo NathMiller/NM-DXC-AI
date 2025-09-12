@@ -26,8 +26,8 @@ class EmailRequest(BaseModel):
     tone: str = "Professional"
     goals: str = "Make it clear, concise, and well articulated"
 
-@app.get("/improve")
-def improveEmail():
-    response: ChatResponse = chat(model='llama3', messages=[{'role': 'user', 'content': "Ten restaurants to visit in Doncaster? Names only"}])
+@app.post("/improve")
+def improveEmail(req: EmailRequest):
+    response: ChatResponse = chat(model='llama3', messages=[{'role': 'user', 'content': req.text}])
     print(response.message.content)
     return {"response": response.message.content}
