@@ -12,6 +12,6 @@ class EmailRequest(BaseModel):
 
 @app.get("/improve")
 def improveEmail():
-    response: ChatResponse = chat(model='llama3', messages=[{'role': 'user', 'content': "Ten restaurants to visit in Newcastle? Names only"}])
+    response: ChatResponse = chat(model='llama3', messages=[{'role': 'user', 'content': "Ten restaurants to visit in Doncaster? Names only"}])
     print(response.message.content)
     return {"response": response.message.content}
