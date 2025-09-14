@@ -1,12 +1,10 @@
 #root {
   margin: 0;
   padding: 2rem;
-  text-align: left;
+  text-align: center;
 }
 
 .title-text {
-
-  text-align: center;
   margin-top: 20px;
 }
 
