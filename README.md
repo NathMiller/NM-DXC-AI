@@ -5,7 +5,7 @@ To run this project:
 
 1. Install requirements.
 
-2. As Ollama runs locally, you will need to pull the model on first use. This is done with *ollama pull gemma:2b*. 
+2. As Ollama runs locally, you will need to pull the model on first use. This is done with *ollama pull gemma:2b*
 
 3. Run the backend with *uvicorn main:app --reload --port 8000* to run the backend on http://localhost:8000.
 
