@@ -59,6 +59,10 @@ function App() {
       </button>
     </div>
 
+    <div className="text-output">
+      <p>{improvedText}</p>
+    </div>
+
     </>
   )
 }

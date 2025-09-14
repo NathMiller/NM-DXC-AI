@@ -38,4 +38,4 @@ def improveEmail(req: EmailRequest):
                                        'content': f"Make the following text into a professional email that is clear and concise: \n\n{req.text}"
                                        }])
     print(response.message.content)
-    return {"response": response.message.content}
+    return {"improved": response.message.content}
