@@ -28,6 +28,14 @@ class EmailRequest(BaseModel):
 
 @app.post("/improve")
 def improveEmail(req: EmailRequest):
-    response: ChatResponse = chat(model='llama3', messages=[{'role': 'user', 'content': req.text}])
+    response: ChatResponse = chat(model='gemma:2b', 
+                                  messages=[
+                                      {
+                                          "role": "system",
+                                          "content": "Your only focus is to rewrite emails. Do not answer other questions"
+                                      },
+                                      {'role': 'user', 
+                                       'content': f"Make the following text into a professional email that is clear and concise: \n\n{req.text}"
+                                       }])
     print(response.message.content)
     return {"response": response.message.content}
