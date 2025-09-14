@@ -48,7 +48,8 @@ function App() {
       <textarea
       value = {emailText}
       onChange={(e) => setEmailText(e.target.value)}
-      rows = {3}
+      rows = {5}
+      style={{width: "40%"}}
       placeholder = "Typing..."
       />
     </div>

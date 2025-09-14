@@ -8,6 +8,16 @@
   margin-top: 20px;
 }
 
+.text-input textarea {
+  resize: none;
+}
+
+.text-output {
+  white-space: pre-wrap;
+  margin-top: 20px;
+  border: 1px solid #777474c7;
+}
+
 
 @keyframes logo-spin {
   from {
