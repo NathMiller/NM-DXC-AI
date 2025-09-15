@@ -11,6 +11,7 @@ function App() {
   const [loading, setLoading] = useState<boolean>(false)
   const [improvedText, setImprovedText] = useState<string>("")
   const [error, setError] = useState<string| null>(null);
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 
   const handleSubmit = async () => {
@@ -21,7 +22,7 @@ function App() {
     setImprovedText("");
 
     try {
-      const response = await fetch("http://localhost:8000/improve", {
+      const response = await fetch(`${BACKEND_URL}/improve`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: emailText })
