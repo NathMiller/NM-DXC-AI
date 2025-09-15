@@ -10,13 +10,16 @@ function App() {
   const [emailText, setEmailText] = useState<string>("")
   const [loading, setLoading] = useState<boolean>(false)
   const [improvedText, setImprovedText] = useState<string>("")
-
+  const [error, setError] = useState<string| null>(null);
 
 
   const handleSubmit = async () => {
         if (!emailText.trim()) return
 
     setLoading(true)
+    setError(null);
+    setImprovedText("");
+
     try {
       const response = await fetch("http://localhost:8000/improve", {
         method: "POST",
@@ -30,9 +33,9 @@ function App() {
 
       const data: ImproveEmailResponse = await response.json()
       setImprovedText(data.improved) 
-    } catch (err) {
+    } catch (err: any) {
       console.error(err)
-      setImprovedText("Something went wrong. Check the backend.")
+      setError("Something went wrong. Check the backend.")
     } finally {
       setLoading(false)
     }
@@ -60,7 +63,7 @@ function App() {
     </div>
 
     <div className="text-output">
-      <p>{improvedText}</p>
+      {error ? <p>{error}</p> : <p>{improvedText}</p>}
     </div>
 
     </>
