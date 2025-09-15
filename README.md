@@ -1,6 +1,9 @@
 # NM-DXC-AI
 This project uses Ollama to allow a user to enter in text they would like to send as an email, and receive a cleaned up and professional version. 
 
+To view the code for this project, all python scripts are located in the backEnd folder. 
+The code for the React front end is primarily located in frontEnd/src/App.tsx.
+
 To run this project:
 
 1. Install requirements.
