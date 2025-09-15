@@ -40,16 +40,9 @@ function App() {
 
   return (
     <>
-    
-  
-    <div className="title-text">
-      <h1>AI Email Improver</h1>  
-    </div>
-
-    <div>
-      <h2> Please enter your email in the box below for improvements</h2>
-    </div>
-    
+    <h1>AI Email Improver</h1>  
+    <h2> Please enter your email in the box below for improvements</h2>
+ 
     <div className="text-input">
       <textarea
       value = {emailText}
