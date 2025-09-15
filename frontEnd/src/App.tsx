@@ -1,12 +1,18 @@
 import { useState } from 'react'
 import './App.css'
 
+interface ImproveEmailResponse {
+  improved: string;
+}
+
 function App() {
 
-  const [emailText, setEmailText] = useState("")
-  const [loading, setLoading] = useState(false)
-  const [improvedText, setImprovedText] = useState("")
-  const handleChange = (e) => {setEmailText(e.target.value)}
+  const [emailText, setEmailText] = useState<string>("")
+  const [loading, setLoading] = useState<boolean>(false)
+  const [improvedText, setImprovedText] = useState<string>("")
+
+
+
   const handleSubmit = async () => {
         if (!emailText.trim()) return
 
@@ -22,7 +28,7 @@ function App() {
         throw new Error("Server error")
       }
 
-      const data = await response.json()
+      const data: ImproveEmailResponse = await response.json()
       setImprovedText(data.improved) 
     } catch (err) {
       console.error(err)
