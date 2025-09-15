@@ -29,7 +29,8 @@ function App() {
       })
 
       if (!response.ok) {
-        throw new Error("Server error")
+        setError(`Something went wrong, status ${response.status}`)
+        return;
       }
 
       const data: ImproveEmailResponse = await response.json()
