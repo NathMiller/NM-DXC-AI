@@ -1,4 +1,4 @@
-# NM-DXC-AI
+# NM-DXC-AI-Email-Improver
 This project uses Ollama to allow a user to enter in text they would like to send as an email, and receive a cleaned up and professional version. 
 
 To view the code for this project, all python scripts are located in the backEnd folder. 
