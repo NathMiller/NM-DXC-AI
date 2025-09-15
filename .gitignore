@@ -60,15 +60,6 @@ target/
 __pypackages__/
 
 
-# Environments
-.env
-.envrc
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
 
 # Visual Studio Code
 .vscode/
